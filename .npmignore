@@ -13,8 +13,11 @@ release/*.min.js
 #test/package.json
 #test/wmtools.js
 #test/worker.js
+test/assets/ff
+test/assets/js
 
 ## ignore the setting files
+.DS_Store
 .vimrc*
 .git*
 

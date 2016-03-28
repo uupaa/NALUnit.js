@@ -1,6 +1,6 @@
 {
   "name": "uupaa.nalunit.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "MPEG4-15 AVC(H.264) - NAL file format",
   "url": "https://github.com/uupaa/NALUnit.js",
   "keywords": ["AVC", "H.264", "NALUnit", "AUD", "EBSP", "IDR", "PPS", "SEI", "SPS", "uupaa", "WebModule", "Unstable"],
@@ -30,7 +30,9 @@
     "patch": "node ../WebModule/run/patch.js",
     "setup": "node ../WebModule/run/setup.js",
     "start": "cd ../; Python -m SimpleHTTPServer 8000 &",
-    "stop": "killall -- Python -m SimpleHTTPServer 8000; exit 0"
+    "stop": "killall -- Python -m SimpleHTTPServer 8000; exit 0",
+    "make_assets": "cd test/assets; ./make_video; cd -",
+    "clean_assets": "cd test/assets; rm -rf ./ff; rm -rf ./js; cd -"
   },
   "webmodule": {
     "develop": false,
@@ -110,7 +112,11 @@
     "uupaa.bit.js": "",
     "uupaa.hexdump.js": ""
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "uupaa.mpeg2ts.js": "",
+    "uupaa.fileloader.js": "",
+    "uupaa.mpeg4bytestream.js": ""
+  },
   "lib": "./lib/",
   "main": "./index.js",
   "author": "uupaa",

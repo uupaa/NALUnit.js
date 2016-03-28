@@ -16,8 +16,11 @@ This module made of [WebModule](https://github.com/uupaa/WebModule).
 <script src="<module-dir>/lib/WebModule.js"></script>
 <script src="<module-dir>/lib/NALUnit.js"></script>
 <script>
-var videoNALUnitArray = [NALUnit, ...];
-var videoNALUnitObjectArray = NALUnit.toNALUnitObject(videoNALUnitArray);
+
+var mpeg2ts     = MPEG2TS.parse( new Uint8Array(buffer) );
+var byteStream  = MPEG2TS.convertTSPacketToByteStream(mpeg2ts["VIDEO_TS_PACKET"]);
+var nalunit     = MPEG4ByteStream.convertByteStreamToNALUnitObjectArray(byteStream);
+
 </script>
 ```
 

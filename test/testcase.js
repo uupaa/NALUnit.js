@@ -3,12 +3,12 @@ var ModuleTestNALUnit = (function(global) {
 var test = new Test(["NALUnit"], { // Add the ModuleName to be tested here (if necessary).
         disable:    false, // disable all tests.
         browser:    true,  // enable browser test.
-        worker:     true,  // enable worker test.
-        node:       true,  // enable node test.
+        worker:     false,  // enable worker test.
+        node:       false,  // enable node test.
         nw:         true,  // enable nw.js test.
         el:         true,  // enable electron (render process) test.
         button:     true,  // show button.
-        both:       true,  // test the primary and secondary modules.
+        both:       false,  // test the primary and secondary modules.
         ignoreError:false, // ignore error.
         callback:   function() {
         },
@@ -17,27 +17,26 @@ var test = new Test(["NALUnit"], { // Add the ModuleName to be tested here (if n
         }
     });
 
-if (IN_BROWSER || IN_NW || IN_EL || IN_WORKER || IN_NODE) {
-    test.add([
-        testNALUnit,
-    ]);
-}
 if (IN_BROWSER || IN_NW || IN_EL) {
     test.add([
-    ]);
-}
-if (IN_WORKER) {
-    test.add([
-    ]);
-}
-if (IN_NODE) {
-    test.add([
+        testNALUnit,
     ]);
 }
 
 // --- test cases ------------------------------------------
 function testNALUnit(test, pass, miss) {
-    test.done(pass());
+    var sourceFile = "../assets/ff/png.all.mp4.00.ts";
+
+    FileLoader.toArrayBuffer(sourceFile, function(buffer) {
+        console.log("testNALUnit: ", sourceFile, buffer.byteLength);
+
+        var mpeg2ts     = MPEG2TS.parse( new Uint8Array(buffer) );
+        var byteStream  = MPEG2TS.convertTSPacketToByteStream(mpeg2ts["VIDEO_TS_PACKET"]);
+        var nalunit     = MPEG4ByteStream.convertByteStreamToNALUnitObjectArray(byteStream);
+        //var mp4tree     = MP4Muxer.mux(nalunit);
+
+        test.done(pass());
+    });
 }
 
 return test.run();

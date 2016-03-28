@@ -14,13 +14,27 @@ onmessage = function(event) {
 
     importScripts("../../lib/WebModule.js");
 
-    WebModule.verify  = true;
-    WebModule.verbose = true;
-    WebModule.publish = true;
+    WebModule.VERIFY  = true;
+    WebModule.VERBOSE = true;
+    WebModule.PUBLISH = true;
 
     importScripts("../../node_modules/uupaa.bit.js/lib/Bit.js");
     importScripts("../../node_modules/uupaa.bit.js/lib/BitView.js");
+    importScripts("../../node_modules/uupaa.mpeg2ts.js/node_modules/uupaa.hash.js/lib/Hash.js");
     importScripts("../../node_modules/uupaa.hexdump.js/lib/HexDump.js");
+    importScripts("../../node_modules/uupaa.mpeg2ts.js/node_modules/uupaa.fileloader.js/lib/FileLoader.js");
+    importScripts("../../lib/NALUnitType.js");
+    importScripts("../../lib/NALUnitParameterSet.js");
+    importScripts("../../lib/NALUnitEBSP.js");
+    importScripts("../../lib/NALUnitAUD.js");
+    importScripts("../../lib/NALUnitSPS.js");
+    importScripts("../../lib/NALUnitPPS.js");
+    importScripts("../../lib/NALUnitSEI.js");
+    importScripts("../../lib/NALUnitIDR.js");
+    importScripts("../../lib/NALUnit.js");
+    importScripts("../../node_modules/uupaa.mpeg2ts.js/node_modules/uupaa.mpeg4bytestream.js/lib/MPEG4ByteStream.js");
+    importScripts("../../node_modules/uupaa.mpeg2ts.js/lib/MPEG2TSParser.js");
+    importScripts("../../node_modules/uupaa.mpeg2ts.js/lib/MPEG2TS.js");
     importScripts("../wmtools.js");
     importScripts("../../lib/NALUnitType.js");
     importScripts("../../lib/NALUnitParameterSet.js");
