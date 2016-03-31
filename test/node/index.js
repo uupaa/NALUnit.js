@@ -6,10 +6,10 @@ WebModule.VERIFY  = true;
 WebModule.VERBOSE = true;
 WebModule.PUBLISH = true;
 
-require("../../node_modules/uupaa.bit.js/lib/Bit.js");
-require("../../node_modules/uupaa.bit.js/lib/BitView.js");
+require("../../node_modules/uupaa.mpeg2ts.js/node_modules/uupaa.bit.js/lib/Bit.js");
+require("../../node_modules/uupaa.mpeg2ts.js/node_modules/uupaa.bit.js/lib/BitView.js");
 require("../../node_modules/uupaa.mpeg2ts.js/node_modules/uupaa.hash.js/lib/Hash.js");
-require("../../node_modules/uupaa.hexdump.js/lib/HexDump.js");
+require("../../node_modules/uupaa.mpeg2ts.js/node_modules/uupaa.hexdump.js/lib/HexDump.js");
 require("../../node_modules/uupaa.mpeg2ts.js/node_modules/uupaa.fileloader.js/lib/FileLoader.js");
 require("../../lib/NALUnitType.js");
 require("../../lib/NALUnitParameterSet.js");
