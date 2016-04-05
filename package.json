@@ -1,6 +1,6 @@
 {
   "name": "uupaa.nalunit.js",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "MPEG4-15 AVC(H.264) - NAL file format",
   "url": "https://github.com/uupaa/NALUnit.js",
   "keywords": ["AVC", "H.264", "NALUnit", "AUD", "EBSP", "IDR", "PPS", "SEI", "SPS", "uupaa", "WebModule", "Unstable"],
@@ -48,6 +48,7 @@
         "lib/NALUnitPPS.js",
         "lib/NALUnitSEI.js",
         "lib/NALUnitIDR.js",
+        "lib/NALUnitNON_IDR.js",
         "lib/NALUnit.js"
       ]
     },
@@ -62,6 +63,7 @@
         "lib/NALUnitPPS.js",
         "lib/NALUnitSEI.js",
         "lib/NALUnitIDR.js",
+        "lib/NALUnitNON_IDR.js",
         "lib/NALUnit.js"
       ]
     },
@@ -76,6 +78,7 @@
         "lib/NALUnitPPS.js",
         "lib/NALUnitSEI.js",
         "lib/NALUnitIDR.js",
+        "lib/NALUnitNON_IDR.js",
         "lib/NALUnit.js"
       ]
     },
@@ -90,6 +93,7 @@
         "lib/NALUnitPPS.js",
         "lib/NALUnitSEI.js",
         "lib/NALUnitIDR.js",
+        "lib/NALUnitNON_IDR.js",
         "lib/NALUnit.js"
       ]
     },
@@ -104,6 +108,7 @@
         "lib/NALUnitPPS.js",
         "lib/NALUnitSEI.js",
         "lib/NALUnitIDR.js",
+        "lib/NALUnitNON_IDR.js",
         "lib/NALUnit.js"
       ]
     }

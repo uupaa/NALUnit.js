@@ -31,6 +31,7 @@ onmessage = function(event) {
     importScripts("../../lib/NALUnitPPS.js");
     importScripts("../../lib/NALUnitSEI.js");
     importScripts("../../lib/NALUnitIDR.js");
+    importScripts("../../lib/NALUnitNON_IDR.js");
     importScripts("../../lib/NALUnit.js");
     importScripts("../../node_modules/uupaa.mpeg2ts.js/node_modules/uupaa.mpeg4bytestream.js/lib/MPEG4ByteStream.js");
     importScripts("../../node_modules/uupaa.mpeg2ts.js/lib/MPEG2TSParser.js");
@@ -44,6 +45,7 @@ onmessage = function(event) {
     importScripts("../../lib/NALUnitPPS.js");
     importScripts("../../lib/NALUnitSEI.js");
     importScripts("../../lib/NALUnitIDR.js");
+    importScripts("../../lib/NALUnitNON_IDR.js");
     importScripts("../../lib/NALUnit.js");
     importScripts("../../release/NALUnit.w.min.js");
     importScripts("../testcase.js");
