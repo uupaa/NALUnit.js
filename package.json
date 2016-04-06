@@ -1,6 +1,6 @@
 {
   "name": "uupaa.nalunit.js",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "MPEG4-15 AVC(H.264) - NAL file format",
   "url": "https://github.com/uupaa/NALUnit.js",
   "keywords": ["AVC", "H.264", "NALUnit", "AUD", "EBSP", "IDR", "PPS", "SEI", "SPS", "uupaa", "WebModule", "Unstable"],
