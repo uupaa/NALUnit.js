@@ -27,8 +27,8 @@ var nalunit     = MPEG4ByteStream.convertByteStreamToNALUnitObjectArray(byteStre
 ## WebWorkers
 
 ```js
-importScripts("<module-dir>lib/WebModule.js");
-importScripts("<module-dir>lib/NALUnit.js");
+importScripts("<module-dir>/lib/WebModule.js");
+importScripts("<module-dir>/lib/NALUnit.js");
 
 ...
 ```
@@ -36,8 +36,8 @@ importScripts("<module-dir>lib/NALUnit.js");
 ## Node.js
 
 ```js
-require("<module-dir>lib/WebModule.js");
-require("<module-dir>lib/NALUnit.js");
+require("<module-dir>/lib/WebModule.js");
+require("<module-dir>/lib/NALUnit.js");
 
 ...
 ```

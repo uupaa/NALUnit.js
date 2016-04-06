@@ -27,6 +27,8 @@ if (IN_BROWSER || IN_NW || IN_EL) {
 function testNALUnit(test, pass, miss) {
     var sourceFile = "../assets/ff/png.all.mp4.00.ts";
 
+    NALUnitAUD.VERBOSE = false;
+
     FileLoader.toArrayBuffer(sourceFile, function(buffer) {
         console.log("testNALUnit: ", sourceFile, buffer.byteLength);
 
