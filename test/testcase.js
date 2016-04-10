@@ -8,7 +8,7 @@ var test = new Test(["NALUnit"], { // Add the ModuleName to be tested here (if n
         nw:         true,  // enable nw.js test.
         el:         true,  // enable electron (render process) test.
         button:     true,  // show button.
-        both:       false,  // test the primary and secondary modules.
+        both:       true,  // test the primary and secondary modules.
         ignoreError:false, // ignore error.
         callback:   function() {
         },
