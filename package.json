@@ -1,6 +1,6 @@
 {
   "name": "uupaa.nalunit.js",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "MPEG4-15 AVC(H.264) - NAL file format",
   "url": "https://github.com/uupaa/NALUnit.js",
   "keywords": ["AVC", "H.264", "NALUnit", "AUD", "EBSP", "IDR", "PPS", "SEI", "SPS", "uupaa", "WebModule", "Unstable"],
@@ -125,6 +125,6 @@
   "lib": "./lib/",
   "main": "./index.js",
   "author": "uupaa",
-  "license": "Apache License Version 2.0",
+  "license": "Apache-2.0",
   "contributors": []
 }
