@@ -18,11 +18,11 @@ onmessage = function(event) {
     WebModule.VERBOSE = true;
     WebModule.PUBLISH = true;
 
-    importScripts("../../node_modules/uupaa.mpeg2ts.js/node_modules/uupaa.bit.js/lib/Bit.js");
-    importScripts("../../node_modules/uupaa.mpeg2ts.js/node_modules/uupaa.bit.js/lib/BitView.js");
+    importScripts("../../node_modules/uupaa.mpeg4bytestream.js/node_modules/uupaa.nalunit.js/node_modules/uupaa.bit.js/lib/Bit.js");
+    importScripts("../../node_modules/uupaa.mpeg4bytestream.js/node_modules/uupaa.nalunit.js/node_modules/uupaa.bit.js/lib/BitView.js");
     importScripts("../../node_modules/uupaa.mpeg2ts.js/node_modules/uupaa.hash.js/lib/Hash.js");
-    importScripts("../../node_modules/uupaa.mpeg2ts.js/node_modules/uupaa.hexdump.js/lib/HexDump.js");
-    importScripts("../../node_modules/uupaa.mpeg2ts.js/node_modules/uupaa.fileloader.js/lib/FileLoader.js");
+    importScripts("../../node_modules/uupaa.mpeg4bytestream.js/node_modules/uupaa.hexdump.js/lib/HexDump.js");
+    importScripts("../../node_modules/uupaa.fileloader.js/lib/FileLoader.js");
     importScripts("../../lib/NALUnitType.js");
     importScripts("../../lib/NALUnitParameterSet.js");
     importScripts("../../lib/NALUnitEBSP.js");
@@ -33,7 +33,7 @@ onmessage = function(event) {
     importScripts("../../lib/NALUnitIDR.js");
     importScripts("../../lib/NALUnitNON_IDR.js");
     importScripts("../../lib/NALUnit.js");
-    importScripts("../../node_modules/uupaa.mpeg2ts.js/node_modules/uupaa.mpeg4bytestream.js/lib/MPEG4ByteStream.js");
+    importScripts("../../node_modules/uupaa.mpeg4bytestream.js/lib/MPEG4ByteStream.js");
     importScripts("../../node_modules/uupaa.mpeg2ts.js/lib/MPEG2TSParser.js");
     importScripts("../../node_modules/uupaa.mpeg2ts.js/lib/MPEG2TS.js");
     importScripts("../wmtools.js");
