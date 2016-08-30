@@ -33,10 +33,12 @@ function testNALUnit(test, pass, miss) {
     FileLoader.toArrayBuffer(sourceFile, function(buffer) {
         console.log("testNALUnit: ", sourceFile, buffer.byteLength);
 
-        var mpeg2ts     = MPEG2TS.parse( new Uint8Array(buffer) );
-        var byteStream  = MPEG2TS.convertTSPacketToByteStream(mpeg2ts["VIDEO_TS_PACKET"]);
-        var nalunit     = MPEG4ByteStream.convertByteStreamToNALUnitObjectArray(byteStream);
-        //var mp4tree     = MP4Muxer.mux(nalunit);
+      //var mpeg2ts     = MPEG2TS.parse( new Uint8Array(buffer) );
+      //var byteStream  = MPEG2TS.convertTSPacketToByteStream(mpeg2ts["VIDEO_TS_PACKET"]);
+      //var nalunit     = MPEG4ByteStream.convertByteStreamToNALUnitObjectArray(byteStream);
+      ////var mp4tree     = MP4Muxer.mux(nalunit);
+        var mpeg2ts     = MPEG2TS.demux( new Uint8Array(buffer) );
+        var nalunit     = MPEG2TS.toNALUnit(mpeg2ts["VIDEO_TS_PACKET"]);
 
         test.done(pass());
     });
