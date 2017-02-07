@@ -21,6 +21,10 @@ if (1) {
     test.add([
         testNALUnit,
         testNALUnit_toRBSP,
+        testNALUnit_ParameterSet_getSPS_strictMode_200,
+        testNALUnit_ParameterSet_getSPS_strictMode_404,
+        testNALUnit_ParameterSet_getSPS_200,
+        testNALUnit_ParameterSet_getSPS_404,
     ]);
 }
 
@@ -73,6 +77,67 @@ function testNALUnit_toRBSP(test, pass, miss) {
         test.done(pass());
     }
 }
+
+function testNALUnit_ParameterSet_getSPS_strictMode_200(test, pass, miss) {
+    var strictMode = true;
+    var pset = new NALUnitParameterSet(strictMode);
+    var sps1 = { "value": 1 };
+
+    pset.setSPS(1, sps1);
+    try {
+        pset.getSPS(1); // sps id = 1 was found
+        test.done(pass());
+    } catch (err) {
+        test.done(miss());
+    }
+}
+
+function testNALUnit_ParameterSet_getSPS_strictMode_404(test, pass, miss) {
+    var strictMode = true;
+    var pset = new NALUnitParameterSet(strictMode);
+    var sps0 = { "value": 0 };
+
+    pset.setSPS(0, sps0);
+    try {
+        pset.getSPS(1); // sps id = 1 was not found
+        test.done(miss());
+    } catch (err) {
+        test.done(pass());
+    }
+}
+
+function testNALUnit_ParameterSet_getSPS_200(test, pass, miss) {
+    var strictMode = false;
+    var pset = new NALUnitParameterSet(strictMode);
+    var sps1 = { "value": 1 };
+
+    pset.setSPS(1, sps1);
+    try {
+        pset.getSPS(1); // sps id = 1 was found
+        test.done(pass());
+    } catch (err) {
+        test.done(miss());
+    }
+}
+
+function testNALUnit_ParameterSet_getSPS_404(test, pass, miss) {
+    var strictMode = false;
+    var pset = new NALUnitParameterSet(strictMode);
+    var sps0 = { "value": 0 };
+
+    pset.setSPS(0, sps0);
+    try {
+        var sps = pset.getSPS(1); // sps id = 1 was not found but not strictMode = false
+        if (sps.value === 0) { // get latest sps id (sps0)
+            test.done(pass());
+        } else {
+            test.done(miss());
+        }
+    } catch (err) {
+        test.done(miss());
+    }
+}
+
 
 return test.run();
 
